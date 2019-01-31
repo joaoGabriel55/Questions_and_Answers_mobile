@@ -56,23 +56,30 @@ class _SplashScreenState extends State<SplashScreen> {
     return PlatformScaffold(
         drawer: drawer,
         body: Container(
-            decoration: BoxDecoration(color: Colors.black),
+            decoration: BoxDecoration(color: Colors.blue),
             child: Column(
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(color: Colors.black),
+                    decoration: BoxDecoration(color: Colors.blue),
                     alignment: FractionalOffset(0.5, 0.3),
                     child: Text(
                       "Questions & Answers",
                       style: TextStyle(fontSize: 40.0, color: Colors.white),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 50.0),
+                    child: CircularProgressIndicator(
+                      valueColor:
+                          new AlwaysStoppedAnimation<Color>(Colors.white),
+                    )),
+                Container(
+                  margin: EdgeInsets.fromLTRB(0.0, 16.0, 0.0, 30.0),
                   child: Text(
-                    "© Adapted by Quaresma 2019",
+                    "© Developed by Quaresma 2019",
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Colors.white,

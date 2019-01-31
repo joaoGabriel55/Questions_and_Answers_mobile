@@ -1,0 +1,48 @@
+//class QuestionsAndAnswersItem extends StatelessWidget {
+//  final QuestionsAndAnswers entry;
+//
+//  const QuestionsAndAnswersItem(this.entry);
+//
+//  Widget _buildTiles(QuestionsAndAnswers root) {
+//    if (root.answersUser.isEmpty)
+//      return ListTile(title: Text(root.questionContent));
+//    return ExpansionTile(
+//      key: PageStorageKey<QuestionsAndAnswers>(root),
+//      title: new Column(
+//        children: <Widget>[
+//          new Padding(padding: EdgeInsets.fromLTRB(0, 16, 0, 0)),
+//          new Container(
+//              child:
+//                  new Column(textDirection: TextDirection.ltr, children: <Widget>[
+//            new Text(
+//              root.questionContent,
+//              softWrap: true,
+//              style: new TextStyle(fontSize: 16.0),
+//              textAlign: TextAlign.left,
+//            )
+//          ])),
+//          new Padding(padding: EdgeInsets.fromLTRB(0, 16, 0, 0)),
+//          new Row(
+//            mainAxisAlignment: MainAxisAlignment.end,
+//            children: <Widget>[
+//              new Text(
+//                "Author: ",
+//                style: TextStyle(fontWeight: FontWeight.bold),
+//              ),
+//              new Text(
+//                root.userName,
+//              ),
+//            ],
+//          ),
+//          new Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 8)),
+//        ],
+//      ),
+//      children: root.answersUser.map((a) => Text(a.answerContent)).toList(),
+//    );
+//  }
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return _buildTiles(entry);
+//  }
+//}

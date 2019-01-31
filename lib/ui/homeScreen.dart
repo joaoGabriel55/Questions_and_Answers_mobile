@@ -3,10 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:q_and_a/common/apifunctions/requestLogoutAPI.dart';
 import 'package:q_and_a/common/platform/platformScaffold.dart';
 import 'package:q_and_a/common/widgets/basicDrawer.dart';
-import 'package:q_and_a/ui/TesteObjs.dart';
+import 'package:q_and_a/ui/questionsAndAnswers/TesteObjs.dart';
 import 'package:q_and_a/ui/loginScreen.dart';
 import 'package:q_and_a/ui/questionsAndAnswers/questionsListAll.dart';
 import 'package:q_and_a/ui/questionsAndAnswers/questionsListByUser.dart';
+import 'package:q_and_a/ui/splashScreen.dart';
 import 'dart:io';
 
 import 'package:shared_preferences/shared_preferences.dart';
@@ -40,7 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
               tabs: [
                 Tab(text: 'My Questions'.toUpperCase()),
                 Tab(text: 'All Questions'.toUpperCase()),
-                Tab(text: 'Teste'.toUpperCase()),
               ],
             ),
             title: Text('Home'),
@@ -60,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               QuestionsListByUser(),
               QuestionsListAll(),
-              Test()
             ],
           ),
         ),
